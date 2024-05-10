@@ -1,0 +1,196 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #FFC0CB 20%, #FF69B4 50%, #FF1493 100%); /* Fundo degradê rosa ocupando toda a tela */
+    font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  color: white
+}
+
+/* Estilo do cabeçalho (header) fixo */
+.fixed-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    z-index: 1000; /* Certifica-se de que o cabeçalho fique por cima do conteúdo */
+}
+
+.fixed-header nav {
+    padding: 10px 20px;
+    background-color: #FFC0CB; /* Fundo rosa claro para a barra de navegação */
+}
+
+.fixed-header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.fixed-header ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.fixed-header ul li a {
+    text-decoration: none;
+    color: #fff; /* Texto branco para os itens do menu */
+}
+
+.fixed-header ul li a:hover {
+    color: purple; /* Mudança de cor ao passar o mouse sobre os itens do menu */
+}
+
+.fixed-header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centraliza os itens do menu */
+}
+
+.fixed-header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.fixed-header nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Texto branco para os itens do menu */
+}
+
+/* Espaço para o conteúdo principal para evitar sobreposição com o cabeçalho */
+.content {
+    margin-top: 70px; /* Altura do cabeçalho + espaço adicional */
+    padding: 20px;
+}
+
+/* Estilo do hero */
+.hero {
+    text-align: center;
+    margin-top: 50px;
+    color: white; /* Texto branco para o conteúdo dentro do hero */
+}
+
+.hero img {
+    border-radius: 50%; /* Deixa a imagem redonda */
+    width: 200px;
+    height: 200px;
+}
+
+.hero img {
+    border: 5px solid #ff66cc; /* Adiciona uma borda rosa à foto */
+}
+
+.hero h1 {
+    font-size: 24px;
+    margin-top: 20px;
+    text-align: center; /* Centraliza o texto abaixo da foto */
+}
+
+/* Estilo para o contêiner do formulário */
+#contato {
+    max-width: 400px; /* largura máxima do contêiner */
+    background-color:  #DB7093; /* cor de fundo */
+    border-radius: 10px; /* bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2); /* sombra */
+    margin-top: 50px;
+}
+
+/* Estilo para o título do formulário */
+#contato h2 {
+    text-align: center; /* centraliza o texto */
+    margin-bottom: 30px; /* espaço abaixo do título */
+}
+
+/* Estilo para o formulário */
+#contact-form {
+    margin-top: 20px; /* espaço acima do formulário */
+}
+
+/* Estilo para rótulos */
+#contact-form label {
+    display: block; /* torna os rótulos em bloco */
+    margin-bottom: 5px; /* espaço abaixo dos rótulos */
+}
+
+/* Estilo para campos de entrada e área de texto */
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%; /* largura total */
+    padding: 10px; /* preenchimento interno */
+    border: 1px solid #ccc; /* borda */
+    border-radius: 5px; /* bordas arredondadas */
+    margin-bottom: 10px; /* espaço abaixo dos campos */
+}
+
+/* Estilo para o botão de envio */
+#contact-form button {
+    width: 100%; /* largura total */
+    padding: 10px; /* preenchimento interno */
+    border: none; /* sem borda */
+    border-radius: 30px; /* bordas arredondadas */
+    background-color: #EE82EE; /* cor de fundo */
+    color: #fff; /* cor do texto */
+    cursor: pointer; /* cursor do mouse */
+    transition: background-color 0.3s; /* transição suave */
+}
+
+/* Estilo específico para os campos de texto */
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: calc(97% - 22px); 
+}
+
+/* Estilo de hover para o botão */
+#contact-form button:hover {
+    background-color: #DA70D6; /* altera a cor de fundo ao passar o mouse */
+}
+
+/* Media Query para telas de TV até celulares menores */
+@media screen and (max-width: 768px) {
+    /* Estilo para o cabeçalho */
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Estilo para a seção de apresentação (hero) */
+    .hero img {
+        width: 80%;
+        max-width: 200px;
+    }
+
+    /* Estilo para as seções individuais */
+    #sobre,
+    #formacao,
+    #portfolio,
+    #contato {
+        margin-bottom: 20px; /* Reduz a margem inferior */
+    }
+
+    /* Estilo para os campos de entrada */
+    #contact-form input[type="text"],
+    #contact-form input[type="email"],
+    #contact-form textarea {
+        width: 100%;
+        padding: 8px; /* Reduz o preenchimento */
+        margin-bottom: 8px; /* Reduz a margem inferior */
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box; /* Garante que o padding não aumente a largura */
+    }
+
+    /* Estilo para o botão de envio */
+    #contact-form button {
+        width: 100%;
+        padding: 8px; /* Reduz o preenchimento */
+        border-radius: 5px;
+    }
+}
